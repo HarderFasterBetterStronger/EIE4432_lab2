@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>21096764D_Drink Ordering System</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<style>
+    .table{
+        fill: green;
+        stroke: black;
+        stroke-width: 2px;
+        cursor:pointer;
+        }
+    .number{
+        cursor:pointer;
+        fill:white;
+        text-anchor: middle;
+        alignment-baseline: central;
+    }
+</style>
+</head>
+
+<body>
+    <header >
+        
+        <div class="p-3 bg-dark text-white">
+
+            <div class="mx-auto p-0.5">
+                <h2 class="text-center">Drink Ordering System</h2>
+              </div>
+            
+          </div>
+    </header>
+    
+
+    
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ">
+                
+                <li class="nav-item"><a class="nav-link mx-5" aria-current="page" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link mx-5" href="order.html">Order</a></li>
+                <li class="nav-item"><a class="nav-link mx-5 active link-primary fw-bold " href="reserve.html">Reserve a Table</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="container mt-2 ">
+      <div class="row  ">
+        <svg width="400" height="100" >
+            <circle class="table" cx="20%" cy="50%" r="40" onclick="selectTable(1)"/>
+            <text x="20%" y="50%" class="number" onclick="selectTable(1)">1</text>
+            <circle class="table" cx="40%" cy="50" r="40" onclick="selectTable(2)"/>
+            <text x="40%" y="50%"  class="number" onclick="selectTable(2)">2</text>
+            <circle class="table" cx="60%" cy="50%" r="40" onclick="selectTable(3)"/>
+            <text x="60%" y="50%"  class="number" onclick="selectTable(3)">3</text>
+            <circle class="table" cx="80%" cy="50%" r="40" onclick="selectTable(4)"/>
+            <text x="80%" y="50%"  class="number" onclick="selectTable(4)">4</text>
+        </svg>
+      </div>
+    </div>
+
+    <div id="selected-table " class="text-center my-3">
+        <h4 class="fw-bold">
+            You are selecting: Table <span id="output"></span>
+        </h4>
+            
+            
+    </div>
+
+
+  <footer class="pt-3 bg-dark text-center text-white fixed-bottom">        
+    <p>© 21096764D_Liu_Jiahao - EIE4432 Lab 2 Project</p>
+  </footer>
+
+
+  <script>
+    function selectTable(tableNumber){
+        
+        var output = document.getElementById("output")
+        output.innerHTML=tableNumber
+    }
+</script>
+
+
+</body>
+
+
+</html>
